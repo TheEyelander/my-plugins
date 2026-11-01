@@ -14,7 +14,7 @@ import com.discord.widgets.settings.WidgetSettings
 class PluginWeb : Plugin() {
     override fun start(context: Context) {
         patcher.after<WidgetSettings>("onViewBound", View::class.java) {
-            Utils.openPage(it.args[0] as Context, PluginWebSettings::class.java)
+            Utils.openPage((it.args[0] as View).context, PluginWebSettings::class.java)
         }
     }
 
