@@ -9,7 +9,7 @@ import com.aliucord.entities.Plugin
 @AliucordPlugin
 class PluginWeb : Plugin() {
     override fun start(context: Context) {
-        Utils.openPageWithProxy(context, PluginWebSettings::class.java)
+        Utils.openPageWithProxy(context, PluginWebSettings())
     }
 
     override fun stop(context: Context) {
