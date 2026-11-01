@@ -25,7 +25,7 @@ class PluginWebPage : SettingsPage() {
                 }
 
                 override fun onBindViewHolder(card: PluginWebCard, pos: Int) {
-                    card.name.text = items[pos]
+                    card.title.text = "${items[pos]} v1.0.0 by RazerTexz"
                 }
 
                 override fun getItemCount(): Int {
