@@ -10,7 +10,8 @@ import com.aliucord.utils.DimenUtils
 import com.discord.utilities.color.ColorCompat
 import com.lytefast.flexinput.R
 
-class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context)) {
+class PluginWebCard(context: Context) : RecyclerView.ViewHolder(com.google.android.material.card.MaterialCardView(context)) {
+//class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context)) {
     val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold)
 
     init {
