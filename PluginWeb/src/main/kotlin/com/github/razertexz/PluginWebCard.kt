@@ -16,6 +16,7 @@ class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context
     init {
         with(itemView as CardView) {
             //layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+            layoutParams.topMargin = DimenUtils.defaultPadding / 2
             radius = DimenUtils.defaultCardRadius.toFloat()
             setCardBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
 
