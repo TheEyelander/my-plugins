@@ -1,6 +1,7 @@
 package com.github.razertexz
 
 import android.view.View
+import androidx.gridlayout.widget.GridLayout //android.widget.GridLayout
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,7 +18,14 @@ private class PluginWebPage : SettingsPage() {
 
         addView(RecyclerView(view.context).apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {}
+            adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+                override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
+                    return object : RecyclerView.ViewHolder(object : GridLayout(parent.context) {}) {}
+                }
+
+                override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {}
+                override fun getItemCount(): Int = 3
+            }
         })
     }
 }
