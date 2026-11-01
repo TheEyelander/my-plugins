@@ -21,8 +21,8 @@ class PluginWebPage : SettingsPage() {
         addView(RecyclerView(view.context).apply {
             layoutManager = LinearLayoutManager(context)
             adapter = object : RecyclerView.Adapter<PluginWebCard>() {
-                override fun onCreateViewHolder(parent: ViewGroup, type: Int) {
-                    return PluginWebCard(parent.context)
+                override fun onCreateViewHolder(root: ViewGroup, type: Int) {
+                    return PluginWebCard(root.context)
                 }
 
                 override fun onBindViewHolder(card: PluginWebCard, pos: Int) {
