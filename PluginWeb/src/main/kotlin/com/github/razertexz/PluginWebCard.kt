@@ -10,6 +10,8 @@ class PluginWebCard(context: Context) : RecyclerView.ViewHolder(LinearLayout(con
     val root = itemView as LinearLayout
     val name = TextView(context).apply {
         textSize = 32.0f
+        setTextColor(android.graphics.Color.RED
+
         root.addView(this)
     }
 }
