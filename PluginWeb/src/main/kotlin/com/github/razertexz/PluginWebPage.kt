@@ -16,11 +16,11 @@ class PluginWebPage : SettingsPage() {
         setActionBarSubtitle("A quick way to search for Aliucord plugins")
         removeScrollView()
 
-        val items = listOf("Plugin 1", "Plugin 2", "Plugin 3", "Plugin 4", "Plugin 5")
-
         addView(RecyclerView(view.context).apply {
             layoutManager = LinearLayoutManager(context)
             adapter = object : RecyclerView.Adapter<PluginWebCard>() {
+                val items = listOf("Plugin 1", "Plugin 2", "Plugin 3", "Plugin 4", "Plugin 5")
+
                 override fun onCreateViewHolder(root: ViewGroup, type: Int): PluginWebCard {
                     return PluginWebCard(root.context)
                 }
