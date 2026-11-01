@@ -15,7 +15,7 @@ subprojects {
     pluginManager.apply("org.jetbrains.kotlin.android")
 
     configure<AliucordExtension> {
-        github("https://github.com/RazerTexz/My-plugins")
+        github("https://github.com/RazerTexz/my-plugins")
     }
 
     configure<LibraryExtension> {
