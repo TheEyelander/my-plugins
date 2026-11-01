@@ -7,7 +7,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class PluginWebCard(context: Context): RecyclerView.ViewHolder(FrameLayout(context)) {
+    val root = itemView as FrameLayout
     val name = TextView(context).apply {
-        (itemView as FrameLayout).addView(this)
+        textSize = 32
+        root.addView(this)
     }
 }
