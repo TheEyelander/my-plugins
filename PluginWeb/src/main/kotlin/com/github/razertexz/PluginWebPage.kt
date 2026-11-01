@@ -9,7 +9,7 @@ import android.widget.GridLayout
 
 import com.aliucord.fragments.SettingsPage
 
-private class PluginWebPage : SettingsPage() {
+class PluginWebPage : SettingsPage() {
     override fun onViewBound(view: View) {
         super.onViewBound(view)
 
