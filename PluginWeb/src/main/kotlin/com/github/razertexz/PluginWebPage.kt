@@ -9,6 +9,7 @@ class PluginWebPage : AppFragment() {
 
         setActionBarTitle("Plugin Web")
         setActionBarSubtitle("A quick way to search for Aliucord plugins")
-        setActionBarDisplayHomeAsUpEnabled(true)
+        //setActionBarDisplayHomeAsUpEnabled()
+        //setActionBarDisplayHomeAsUpEnabled(true)
     }
 }
