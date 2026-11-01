@@ -8,20 +8,19 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.google.android.material.switchmaterial.SwitchMaterial
 
-class PluginWebCard(context: Context) : RecyclerView.ViewHolder(LinearLayout(context).apply {
-    addView(name)
-    addView(switch)
-}) {
+class PluginWebCard(context: Context) : RecyclerView.ViewHolder(LinearLayout(context)) {
     val name = TextView(context).apply {
         setTextColor(Color.WHITE)
     }
 
     val switch = SwitchMaterial(context)
 
-    /*init {
+    init {
         with(itemView as LinearLayout) {
+            layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
+
             addView(name)
             addView(switch)
         }
-    }*/
+    }
 }
