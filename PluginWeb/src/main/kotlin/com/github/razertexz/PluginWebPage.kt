@@ -1,10 +1,11 @@
 package com.github.razertexz
 
 import android.view.View
-import androidx.gridlayout.widget.GridLayout //android.widget.GridLayout
+import android.view.ViewGroup
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import android.widget.GridLayout
 
 import com.aliucord.fragments.SettingsPage
 
