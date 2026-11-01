@@ -6,6 +6,8 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
+import com.aliucord.utils.DimenUtils
+
 class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context)) {
     val title = TextView(context).apply {
         setTextColor(android.graphics.Color.RED)
@@ -13,7 +15,11 @@ class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context
 
     init {
         with(itemView as CardView) {
-            layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+            radius = DimenUtils.defaultCardRadius
+            layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT).apply {
+                topMargin = DimenUtils.defaultPadding
+            }
+
             addView(title)
         }
     }
