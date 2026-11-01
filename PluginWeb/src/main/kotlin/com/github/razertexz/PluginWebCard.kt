@@ -15,7 +15,7 @@ class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context
 
     init {
         with(itemView as CardView) {
-            radius = DimenUtils.defaultCardRadius
+            radius = DimenUtils.defaultCardRadius.toFloat()
             layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT).apply {
                 topMargin = DimenUtils.defaultPadding
             }
