@@ -9,5 +9,7 @@ class PluginWebSettings : SettingsPage() {
 
         setActionBarTitle("Plugin Web")
         setActionBarSubtitle("A quick way to search for Aliucord plugins")
+
+        removeScrollView()
     }
 }
