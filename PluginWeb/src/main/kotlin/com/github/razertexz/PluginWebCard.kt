@@ -11,9 +11,7 @@ import com.discord.utilities.color.ColorCompat
 import com.lytefast.flexinput.R
 
 class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context)) {
-    val title = TextView(context).apply {
-        setTextColor(android.graphics.Color.RED)
-    }
+    val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold)
 
     init {
         with(itemView as CardView) {
