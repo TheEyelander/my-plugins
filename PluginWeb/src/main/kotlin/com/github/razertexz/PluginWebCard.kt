@@ -16,10 +16,10 @@ class PluginWebCard(context: Context) : RecyclerView.ViewHolder(MaterialCardView
     val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold)
 
     init {
-        with(itemView as CardView) {
-            layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT).apply {
+        with(itemView as MaterialCardView) {
+            /*layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT).apply {
                 topMargin = DimenUtils.defaultPadding / 2
-            }
+            }*/
 
             //radius = DimenUtils.defaultCardRadius.toFloat()
             //setCardBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
