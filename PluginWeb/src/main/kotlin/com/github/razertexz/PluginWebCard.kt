@@ -17,7 +17,7 @@ class PluginWebCard(context: Context) : RecyclerView.ViewHolder(LinearLayout(con
 
     init {
         with(itemView as LinearLayout) {
-            layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
+            layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
 
             addView(name)
             addView(switch)
