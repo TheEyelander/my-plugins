@@ -1,16 +1,13 @@
 package com.github.razertexz
 
 import android.content.Context
-import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 
 import androidx.recyclerview.widget.RecyclerView
 
-class PluginWebCard(context: Context): RecyclerView.ViewHolder(FrameLayout(context)) {
-    val root = (itemView as FrameLayout).apply {
-        layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
-    }
-
+class PluginWebCard(context: Context) : RecyclerView.ViewHolder(LinearLayout(context)) {
+    val root = itemView as LinearLayout
     val name = TextView(context).apply {
         textSize = 32.0f
         root.addView(this)
