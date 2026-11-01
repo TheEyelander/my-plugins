@@ -15,7 +15,7 @@ class PluginWebCard(context: Context) : RecyclerView.ViewHolder(androidx.cardvie
     val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold)
 
     init {
-        with(itemView as MaterialCardView) {
+        with(itemView as androidx.cardview.widget.CardView) {
             layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT).apply {
                 topMargin = DimenUtils.defaultPadding / 2
             }
