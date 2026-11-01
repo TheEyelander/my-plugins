@@ -8,9 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class PluginWebCard(context: Context) : RecyclerView.ViewHolder(GridLayout(context)) {
-    val root = itemView as GridLayout
+    itemView = itemView as GridLayout
+
     val name = TextView(context).apply {
         setTextColor(Color.WHITE)
-        root.addView(this)
+        itemView.addView(this, GridLayout.LayoutParams(GridLayout.spec(1), GridLayout.spec(0)))
     }
 }
