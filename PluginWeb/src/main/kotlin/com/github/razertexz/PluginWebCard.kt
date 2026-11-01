@@ -10,7 +10,7 @@ import com.aliucord.utils.DimenUtils
 import com.discord.utilities.color.ColorCompat
 import com.lytefast.flexinput.R
 
-class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context, null, R.i.FriendsList_ContactSyncUpsell_Card)) {
+class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context)) {
     val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold)
 
     init {
@@ -19,8 +19,8 @@ class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context
                 topMargin = DimenUtils.defaultPadding / 2
             }
 
-            //radius = DimenUtils.defaultCardRadius.toFloat()
-            //setCardBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
+            radius = DimenUtils.defaultCardRadius.toFloat()
+            setCardBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
 
             addView(title)
         }
