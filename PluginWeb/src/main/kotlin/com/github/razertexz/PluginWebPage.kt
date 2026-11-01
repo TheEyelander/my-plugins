@@ -21,7 +21,7 @@ class PluginWebPage : SettingsPage() {
         addView(RecyclerView(view.context).apply {
             layoutManager = LinearLayoutManager(context)
             adapter = object : RecyclerView.Adapter<PluginWebCard>() {
-                override fun onCreateViewHolder(root: ViewGroup, type: Int) {
+                override fun onCreateViewHolder(root: ViewGroup, type: Int): PluginWebCard {
                     return PluginWebCard(root.context)
                 }
 
@@ -29,7 +29,7 @@ class PluginWebPage : SettingsPage() {
                     card.name.text = items[pos]
                 }
 
-                override fun getItemCount() {
+                override fun getItemCount(): Int {
                     return items.size
                 }
             }
