@@ -11,9 +11,11 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.aliucord.fragments.SettingsPage
 
-class PluginWebViewHolder(private val gridLayout: GridLayout) : RecyclerView.ViewHolder(gridLayout) {
-    val nameText = TextView(context).apply {
-        gridLayout.addView(this)
+class PluginWebViewHolder(context: Context) : RecyclerView.ViewHolder(GridLayout(context).apply {
+    layoutParams = RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+}) {
+    val name = TextView(context).apply {
+        (itemView as ViewGroup).addView(this)
     }
 }
 
@@ -30,13 +32,12 @@ class PluginWebScreen : SettingsPage() {
         addView(RecyclerView(view.context).apply {
             layoutManager = LinearLayoutManager(context)
             adapter = object : RecyclerView.Adapter<PluginWebViewHolder>() {
-                override fun onCreateViewHolder(parent: ViewGroup, type: Int): PluginWebViewHolder = PluginWebViewHolder(GridLayout(parent.context))
-
+                override fun onCreateViewHolder(parent: ViewGroup, type: Int) = PluginWebViewHolder(parent.context)
                 override fun onBindViewHolder(holder: PluginWebViewHolder, pos: Int) {
-                    holder.itemView.nameText.text = items[pos]
+                    holder.name.text = items[pos]
                 }
 
-                override fun getItemCount(): Int = items.size
+                override fun getItemCount() = items.size
             }
         })
     }
