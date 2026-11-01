@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.aliucord.fragments.SettingsPage
 
-class PluginWebSettingsPage : SettingsPage() {
+private class PluginWebPage : SettingsPage() {
     override fun onViewBound(view: View) {
         super.onViewBound(view)
 
@@ -17,6 +17,7 @@ class PluginWebSettingsPage : SettingsPage() {
 
         addView(RecyclerView(view.context).apply {
             layoutManager = LinearLayoutManager(context)
+            adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {}
         })
     }
 }
