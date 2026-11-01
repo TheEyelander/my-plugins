@@ -21,8 +21,8 @@ class PluginWebPage : SettingsPage() {
             adapter = object : RecyclerView.Adapter<PluginWebCard>() {
                 val items = listOf("Plugin 1", "Plugin 2", "Plugin 3", "Plugin 4", "Plugin 5")
 
-                override fun onCreateViewHolder(root: ViewGroup, type: Int): PluginWebCard {
-                    return PluginWebCard(root.context)
+                override fun onCreateViewHolder(parent: ViewGroup, type: Int): PluginWebCard {
+                    return PluginWebCard(parent.context)
                 }
 
                 override fun onBindViewHolder(card: PluginWebCard, pos: Int) {
