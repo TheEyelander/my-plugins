@@ -1,5 +1,6 @@
 package com.github.razertexz
 
+import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.GridLayout
@@ -9,6 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.aliucord.fragments.SettingsPage
+
+class PluginWebViewHolder(private val gridLayout: GridLayout) : RecyclerView.ViewHolder(gridLayout) {
+    val nameText = TextView(context).apply {
+        gridLayout.addView(this)
+    }
+}
 
 class PluginWebScreen : SettingsPage() {
     override fun onViewBound(view: View) {
@@ -22,14 +29,10 @@ class PluginWebScreen : SettingsPage() {
 
         addView(RecyclerView(view.context).apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-                override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder = object : RecyclerView.ViewHolder(object : GridLayout(parent.context) {
-                    val nameText = TextView(context).apply {
-                        addChild(this)
-                    }
-                }) {}
+            adapter = object : RecyclerView.Adapter<PluginWebViewHolder>() {
+                override fun onCreateViewHolder(parent: ViewGroup, type: Int): PluginWebViewHolder = PluginWebViewHolder(GridLayout(parent.context))
 
-                override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
+                override fun onBindViewHolder(holder: PluginWebViewHolder, pos: Int) {
                     holder.itemView.nameText.text = items[pos]
                 }
 
