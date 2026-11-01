@@ -1,18 +1,19 @@
 package com.github.razertexz
 
 import android.content.Context
+import android.widget.FrameLayout
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-
 import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.RecyclerView
 
 class PluginWebCard(context: Context) : RecyclerView.ViewHolder(CardView(context)) {
     val title = TextView(context).apply {
-        setTextColor(android.graphics.Color.WHITE)
+        setTextColor(android.graphics.Color.RED)
     }
 
     init {
         with(itemView as CardView) {
+            layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT)
             addView(title)
         }
     }
