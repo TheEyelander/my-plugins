@@ -21,6 +21,7 @@ class PluginWebPage : SettingsPage() {
             adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
                     return object : RecyclerView.ViewHolder(CheckedSetting(parent.context, null).apply {
+                        removeAllViews()
                         f(CheckedSetting.ViewType.SWITCH)
                     }) {}
                 }
