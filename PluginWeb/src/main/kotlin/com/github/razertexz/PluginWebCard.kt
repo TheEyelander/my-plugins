@@ -1,12 +1,13 @@
 package com.github.razertexz
 
 import android.content.Context
-import android.widget.LinearLayout
+import android.widget.GridLayout
 import android.widget.TextView
 
-class PluginWebCard(context: Context) : LinearLayout(context) {
-    val title = TextView(context).apply {
-        setTextColor(android.graphics.Color.RED)
+import com.lytefast.flexinput.R
+
+class PluginWebCard(context: Context) : GridLayout(context) {
+    val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold).apply {
         addView(this)
     }
 }
