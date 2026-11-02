@@ -1,6 +1,7 @@
 package com.github.razertexz
 
 import android.content.Context
+import android.view.Gravity
 import android.widget.GridLayout
 import android.widget.TextView
 
@@ -13,13 +14,13 @@ class PluginWebCard(context: Context) : GridLayout(context) {
     val description = TextView(context, null, 0, R.i.UiKit_TextView_Subtext)
 
     init {
-        rowCount = 2
-        columnCount = 2
-
         title.textSize = 16.0f
 
-        addView(title)
-        addView(toggle)
-        addView(description)
+        addView(title, GridLayout.LayoutParams(GridLayout.spec(0), GridLayout.spec(0)))
+        addView(toggle, GridLayout.LayoutParams(GridLayout.spec(0), GridLayout.spec(1, 1f)).apply {
+            gravity = Gravity.END
+        })
+
+        addView(description, GridLayout.LayoutParams(GridLayout.spec(1), GridLayout.spec(0, 2)))
     }
 }
