@@ -19,10 +19,12 @@ class PluginWebCard(context: Context) : LinearLayout(context) {
         setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
 
         addView(LinearLayout(context).apply {
+            setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundPrimary))
+
             addView(title.apply {
                 textSize = 16.0f
             }, LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f))
- 
+
             addView(toggle)
         })
 
