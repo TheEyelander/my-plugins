@@ -20,7 +20,7 @@ class PluginWebPage : SettingsPage() {
             layoutManager = LinearLayoutManager(context)
             adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
-                    return RecyclerView.ViewHolder(CheckedSetting(parent.context, null))
+                    return object : RecyclerView.ViewHolder(CheckedSetting(parent.context, null)) {}
                 }
 
                 override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
