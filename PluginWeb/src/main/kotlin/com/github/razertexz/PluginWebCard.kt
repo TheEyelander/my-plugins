@@ -21,6 +21,6 @@ class PluginWebCard(context: Context) : LinearLayout(context, null, 0, R.i.UiKit
             addView(toggle)
         })
 
-        addView(description, LayoutParams(MATCH_PARENT, WRAP_CONTENT))
+        addView(description)
     }
 }
