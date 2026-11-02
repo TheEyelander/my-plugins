@@ -24,13 +24,13 @@ class PluginWebPage : SettingsPage() {
 
                 override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
                     with(holder.itemView as PluginWebCard) {
-                        title.text = "Plugin #$pos (v1.0.0) by RazerTexz"
-                        description.text = "This is the description of Plugin #$pos"
+                        title.text = "Title (v1.0.0) by RazerTexz"
+                        description.text = "Description"
                     }
                 }
 
                 override fun getItemCount(): Int {
-                    return 3
+                    return 10
                 }
             }
         })
