@@ -16,8 +16,8 @@ class PluginWebCard(context: Context) : GridLayout(context, null, 0, R.i.UiKit_V
         columnCount = 2
         title.textSize = 16.0f
 
-        addView(title, GridLayout.LayoutParams(GridLayout.spec(0),GridLayout.spec(0, 1f)))
+        addView(title, GridLayout.LayoutParams(GridLayout.spec(0), GridLayout.spec(0, GridLayout.FILL, 1f)))
         addView(toggle, GridLayout.LayoutParams(GridLayout.spec(0), GridLayout.spec(1)))
-        addView(description, GridLayout.LayoutParams(GridLayout.spec(1), GridLayout.spec(0, 2)))
+        addView(description, GridLayout.LayoutParams(GridLayout.spec(1), GridLayout.spec(0, GridLayout.FILL, 2)))
     }
 }
