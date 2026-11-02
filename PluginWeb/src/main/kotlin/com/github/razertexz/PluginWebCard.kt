@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.google.android.material.switchmaterial.SwitchMaterial
 import com.lytefast.flexinput.R
 
-class PluginWebCard(context: Context) : GridLayout(context) {
+class PluginWebCard(context: Context) : GridLayout(context, null, 0, R.i.UiKit_ViewGroup) {
     val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold)
     val toggle = SwitchMaterial(context)
     val description = TextView(context, null, 0, R.i.UiKit_TextView_Subtext)
