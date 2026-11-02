@@ -1,23 +1,26 @@
 package com.github.razertexz
 
 import android.content.Context
-import android.widget.GridLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 
 import com.google.android.material.switchmaterial.SwitchMaterial
 import com.lytefast.flexinput.R
 
-class PluginWebCard(context: Context) : GridLayout(context, null, 0, R.i.UiKit_ViewGroup) {
+class PluginWebCard(context: Context) : LinearLayout(context, null, 0, R.i.UiKit_ViewGroup_LinearLayout) {
     val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold)
     val toggle = SwitchMaterial(context)
     val description = TextView(context, null, 0, R.i.UiKit_TextView_Subtext)
 
     init {
-        columnCount = 2
-        title.textSize = 16.0f
+        addView(LinearLayout(context, null, 0, R.i.UiKit_ViewGroup_LinearLayout_Horizontal).apply {
+            addView(title.apply {
+                textSize = 16.0f
+            }, LayoutParams(0, WRAP_CONTENT, 1f))
+ 
+            addView(toggle)
+        })
 
-        addView(title, GridLayout.LayoutParams(GridLayout.spec(0), GridLayout.spec(0, GridLayout.FILL, 1f)))
-        addView(toggle, GridLayout.LayoutParams(GridLayout.spec(0), GridLayout.spec(1)))
-        addView(description, GridLayout.LayoutParams(GridLayout.spec(1), GridLayout.spec(0, 2, GridLayout.FILL, 1f)))
+        addView(description, LayoutParams(MATCH_PARENT, WRAP_CONTENT))
     }
 }
