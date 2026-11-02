@@ -28,7 +28,7 @@ class PluginWebPage : SettingsPage() {
                 override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
                     with(holder.itemView as CheckedSetting) {
                         setText("This is the text")
-                        setSubText("This is the subtext")
+                        setSubtext("This is the subtext")
                     }
                 }
 
