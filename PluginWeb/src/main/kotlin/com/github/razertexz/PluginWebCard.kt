@@ -13,6 +13,8 @@ class PluginWebCard(context: Context) : GridLayout(context, null, 0, R.i.UiKit_V
     val description = TextView(context, null, 0, R.i.UiKit_TextView_Subtext)
 
     init {
+        columnCount = 2
+
         addView(title.apply {
             textSize = 16.0f
         }, GridLayout.LayoutParams(GridLayout.spec(0), GridLayout.spec(0, 1f)))
