@@ -23,8 +23,9 @@ class PluginWebPage : SettingsPage() {
                 }
 
                 override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
-                    val card = holder.itemView as PluginWebCard
-                    card.title.text = "$pos"
+                    with(holder.itemView as PluginWebCard) {
+                        title.text = "$pos"
+                    }
                 }
 
                 override fun getItemCount(): Int {
