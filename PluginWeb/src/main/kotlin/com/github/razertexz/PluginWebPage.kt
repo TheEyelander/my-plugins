@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.aliucord.fragments.SettingsPage
-import com.discord.views.CheckedSetting
 
 class PluginWebPage : SettingsPage() {
     override fun onViewBound(view: View) {
@@ -20,21 +19,13 @@ class PluginWebPage : SettingsPage() {
             layoutManager = LinearLayoutManager(context)
             adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
-                    return object : RecyclerView.ViewHolder(CheckedSetting(parent.context, null).apply {
-                        removeAllViews()
-                        f(CheckedSetting.ViewType.SWITCH)
-                    }) {}
+                    return object : RecyclerView.ViewHolder(PluginWebCard(parent.context)) {}
                 }
 
-                override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
-                    with(holder.itemView as CheckedSetting) {
-                        setText("This is the text")
-                        setSubtext("This is the subtext")
-                    }
-                }
+                override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {}
 
                 override fun getItemCount(): Int {
-                    return 5
+                    return 3
                 }
             }
         })
