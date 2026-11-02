@@ -24,7 +24,7 @@ class PluginWebPage : SettingsPage() {
 
                 override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
                     with(holder.itemView as PluginWebCard) {
-                        title.text = "$pos"
+                        title.text = "Plugin #$pos (v1.0.0) by RazerTexz"
                     }
                 }
 
