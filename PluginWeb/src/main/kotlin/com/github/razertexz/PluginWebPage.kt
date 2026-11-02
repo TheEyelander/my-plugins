@@ -20,13 +20,13 @@ class PluginWebPage : SettingsPage() {
             layoutManager = LinearLayoutManager(context)
             adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
-                    return object : RecyclerView.ViewHolder(CheckedSetting(parent.context, null)) {}
+                    return object : RecyclerView.ViewHolder(CheckedSetting(parent.context, null).apply {
+                        f(CheckedSetting.ViewType.SWITCH)
+                    }) {}
                 }
 
                 override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
                     with(holder.itemView as CheckedSetting) {
-                        f(CheckedSetting.ViewType.SWITCH)
-
                         setText("This is the text")
                         setSubText("This is the subtext")
                     }
