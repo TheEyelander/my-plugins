@@ -24,6 +24,11 @@ class PluginWebPage : SettingsPage() {
                 }
 
                 override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
+                    with(holder.itemView as CheckedSetting) {
+                        f(CheckedSetting.ViewType.SWITCH)
+                        text = "This is the text"
+                        subText = "This is the subtext"
+                    }
                 }
 
                 override fun getItemCount(): Int {
