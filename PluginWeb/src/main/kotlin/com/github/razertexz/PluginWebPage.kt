@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.aliucord.fragments.SettingsPage
+import com.discord.views.CheckedSetting
 
 class PluginWebPage : SettingsPage() {
     override fun onViewBound(view: View) {
@@ -18,17 +19,15 @@ class PluginWebPage : SettingsPage() {
         addView(RecyclerView(view.context).apply {
             layoutManager = LinearLayoutManager(context)
             adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-                val items = listOf("Plugin 1", "Plugin 2", "Plugin 3", "Plugin 4", "Plugin 5")
-
                 override fun onCreateViewHolder(parent: ViewGroup, type: Int): RecyclerView.ViewHolder {
-                    return RecyclerView.ViewHolder(parent)
+                    return RecyclerView.ViewHolder(CheckedSetting(parent.context, null))
                 }
 
                 override fun onBindViewHolder(holder: RecyclerView.ViewHolder, pos: Int) {
                 }
 
                 override fun getItemCount(): Int {
-                    return items.size
+                    return 5
                 }
             }
         })
