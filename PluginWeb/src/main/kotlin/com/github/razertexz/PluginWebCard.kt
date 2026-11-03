@@ -8,6 +8,7 @@ import com.lytefast.flexinput.R
 
 class PluginWebCard(context: Context) : CardView(context) {
     init {
-        
+        layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+        //setCardBackgroundColor(color)
     }
 }
