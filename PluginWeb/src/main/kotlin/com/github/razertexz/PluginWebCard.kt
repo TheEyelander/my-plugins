@@ -1,21 +1,14 @@
 package com.github.razertexz
 
 import android.content.Context
-import android.widget.LinearLayout
-import android.widget.TextView
+import androidx.cardview.widget.CardView
 
 import com.discord.utilities.color.ColorCompat
 import com.lytefast.flexinput.R
 
-class PluginWebCard(context: Context) : LinearLayout(context) {
+class PluginWebCard(context: Context) : CardView(context) {
     init {
-        orientation = VERTICAL
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
-        setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
-
-        addView(TextView(context).apply {
-            text = "Hello!"
-            setTextAppearance(context, R.i.UiKit_TextAppearance_Semibold)
-        })
+        setCardBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
     }
 }
