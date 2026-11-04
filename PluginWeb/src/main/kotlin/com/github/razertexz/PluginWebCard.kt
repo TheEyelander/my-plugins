@@ -3,6 +3,7 @@ package com.github.razertexz
 import android.content.Context
 import androidx.cardview.widget.CardView
 
+import com.aliucord.utils.DimenUtils
 import com.discord.utilities.color.ColorCompat
 import com.lytefast.flexinput.R
 
