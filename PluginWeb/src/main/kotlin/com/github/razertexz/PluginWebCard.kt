@@ -2,6 +2,7 @@ package com.github.razertexz
 
 import android.content.Context
 import android.widget.LinearLayout
+import android.widget.TextView
 
 import com.discord.utilities.color.ColorCompat
 import com.lytefast.flexinput.R
