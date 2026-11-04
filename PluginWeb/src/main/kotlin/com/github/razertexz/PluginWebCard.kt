@@ -4,6 +4,7 @@ import android.content.Context
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Switch
+import android.view.Gravity
 import androidx.cardview.widget.CardView
 
 import com.aliucord.utils.DimenUtils
@@ -27,9 +28,11 @@ class PluginWebCard(context: Context) : CardView(context) {
 
                 addView(title.apply {
                     text = "Test"
-                }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
+                })
 
-                addView(toggle)
+                addView(toggle.apply {
+                    gravity = Gravity.END
+                })
             }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
 
             addView(description.apply {
