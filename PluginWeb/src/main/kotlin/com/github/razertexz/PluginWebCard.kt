@@ -10,12 +10,11 @@ import com.lytefast.flexinput.R
 class PluginWebCard(context: Context) : LinearLayout(context) {
     init {
         orientation = VERTICAL
-        //layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
-        //setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
+        setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
 
         addView(TextView(context).apply {
             text = "Hello!"
             setTextColor(android.graphics.Color.RED)
-        })
+        }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
     }
 }
