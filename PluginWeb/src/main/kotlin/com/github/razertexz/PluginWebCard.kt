@@ -12,7 +12,7 @@ import com.lytefast.flexinput.R
 
 class PluginWebCard(context: Context) : CardView(context) {
     val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold)
-    val toggle = TextView(context, null, 0, R.i.UiKit_TextView_Subtext)
+    val toggle = Switch(context)
     val description = TextView(context, null, 0, R.i.UiKit_TextView_Subtext)
     
     init {
@@ -20,7 +20,7 @@ class PluginWebCard(context: Context) : CardView(context) {
         setCardBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
 
         addView(LinearLayout(context).apply {
-            orientation = VERTICAL
+            orientation = LinearLayout.VERTICAL
 
             addView(LinearLayout(context).apply {
                 setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondaryAlt))
