@@ -25,11 +25,16 @@ class PluginWebCard(context: Context) : CardView(context) {
             addView(LinearLayout(context).apply {
                 setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondaryAlt))
 
-                addView(title)
+                addView(title.apply {
+                    text = "Test"
+                })
+
                 addView(toggle)
             }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
 
-            addView(description)
+            addView(description.apply {
+                text = "Test"
+            })
         }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
     }
 }
