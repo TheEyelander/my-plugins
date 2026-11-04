@@ -30,7 +30,7 @@ class PluginWebCard(context: Context) : CardView(context) {
                     text = "Test"
                 })
 
-                addView(toggle.apply {
+                addView(toggle, LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT).apply {
                     gravity = Gravity.END
                 })
             }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
