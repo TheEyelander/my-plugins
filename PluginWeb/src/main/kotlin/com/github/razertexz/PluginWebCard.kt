@@ -27,7 +27,7 @@ class PluginWebCard(context: Context) : CardView(context) {
 
                 addView(title.apply {
                     text = "Test"
-                })
+                }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
 
                 addView(toggle)
             }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
