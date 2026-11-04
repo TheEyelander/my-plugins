@@ -2,6 +2,8 @@ package com.github.razertexz
 
 import android.content.Context
 import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Switch
 import androidx.cardview.widget.CardView
 
 import com.aliucord.utils.DimenUtils
@@ -9,12 +11,25 @@ import com.discord.utilities.color.ColorCompat
 import com.lytefast.flexinput.R
 
 class PluginWebCard(context: Context) : CardView(context) {
+    val title = TextView(context, null, 0, R.i.UiKit_TextView_Semibold)
+    val toggle = TextView(context, null, 0, R.i.UiKit_TextView_Subtext)
+    val description = TextView(context, null, 0, R.i.UiKit_TextView_Subtext)
+    
     init {
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
         setCardBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
 
         addView(LinearLayout(context).apply {
-            setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondaryAlt))
+            orientation = VERTICAL
+
+            addView(LinearLayout(context).apply {
+                setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondaryAlt))
+
+                addView(title)
+                addView(toggle)
+            }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
+
+            addView(description)
         }, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
     }
 }
