@@ -9,6 +9,6 @@ import com.lytefast.flexinput.R
 class PluginWebCard(context: Context) : LinearLayout(context) {
     init {
         orientation = VERTICAL
-        //setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
+        setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
     }
 }
