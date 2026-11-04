@@ -1,14 +1,14 @@
 package com.github.razertexz
 
 import android.content.Context
-import androidx.cardview.widget.CardView
+import android.widget.LinearLayout
 
 import com.discord.utilities.color.ColorCompat
 import com.lytefast.flexinput.R
 
-class PluginWebCard(context: Context) : CardView(context) {
+class PluginWebCard(context: Context) : LinearLayout(context) {
     init {
-        layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
-        setCardBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
+        orientation = VERTICAL
+        //setBackgroundColor(ColorCompat.getThemedColor(context, R.b.colorBackgroundSecondary))
     }
 }
